@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: love_letter;
-	src: local(love_letter_font), url(./love_letter.ttf) format('opentype');
+	src: local(love_letter_font), url(../res/ttf/love_letter.ttf) format('opentype');
 }
 
 h1 {
@@ -116,7 +116,7 @@ ul {
 	margin-right: 20%;
 }
 
-#column-center {
+.column-center {
 	height: auto;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -132,12 +132,17 @@ ul {
 	margin-top: 2%;
 	margin-bottom: 2%;
 	position: relative;
-	text-align: center;
 }
 
 .panel p {
 	padding-left: 1em;
 	padding-right: 1em;
+}
+
+/* Gallery is used for showcasing an image */
+.gallery {
+	height: auto;
+	width: 40%;
 }
 
 /* End of file */

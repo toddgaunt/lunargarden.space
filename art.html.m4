@@ -3,11 +3,12 @@ m4_define(`ROOT_DIR', `')m4_dnl
 <!DOCTYPE html>
 <!--Author: Todd Gaunt-->
 <html>
-	HEADER(`Visceral Observer')
+	HEADER(`Art')
 	<body>
 		TITLE
 		<div class="column-center">
-			POST(`1', `2018-02-11', `The First Post', `umbraa')
+			IMAGE_POST(`SR22', `2018-02-08')
+			IMAGE_POST(`Bishop Mecha', `2015-12-XX')
 		</div>
 	</body>
 </html>
