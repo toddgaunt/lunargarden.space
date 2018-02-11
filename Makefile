@@ -24,5 +24,6 @@ clean:
 %.html: %.html.m4 m4/site.m4
 	@echo "M4 $@"
 	@$(M4) $(M4FLAGS) $< > $@
+	#@tidy5 -m $@
 
 .PHONY: all options check clean dist
