@@ -1,0 +1,143 @@
+/* Author: Todd Gaunt */
+/*
+@font-face {
+	font-family: terminus;
+	src: local(terminus), url(../res/ttf/terminus_4.46.0.ttf) format('opentype');
+}
+*/
+
+@font-face {
+	font-family: love_letter;
+	src: local(love_letter_font), url(../res/ttf/love_letter.ttf) format('opentype');
+}
+
+h1 {
+	color: #afafff;
+	font-family: love_letter;
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+	text-shadow: 0rem 0rem 0.2rem #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2 {
+	border: solid #878787;
+	border-width: 0.1rem 0;
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+	padding: 0.1rem 1rem;
+	text-shadow: 0rem 0rem .2rem #ffffff;
+	text-align: center;
+}
+
+h3 {
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+}
+
+h4 {
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+}
+
+h5 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+h6 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #8787d7;
+
+}
+
+a:hover, a:active {
+	color: #ffffff;
+	text-shadow: 0em 0em 0.5em #afafff;
+}
+
+body {
+	font-family: terminus, serif;
+	letter-spacing: 0.1rem;
+	font-weight: lighter;
+	color: #d7d7d7;
+	background-color: #1c1c1c;
+}
+
+body, html {
+	height: auto%;
+	margin: 0;
+}
+
+input {
+	background-color: #303030;
+	border: none;
+	box-shadow: 0em 0em .2em #000000;
+	box-sizing: border-box;
+	color: #d7d7d7;
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#scanlines {
+	background-image: url("../res/wired/scanlines.gif");
+	background-repeat: repeat;
+	background-size: 9px 9px;
+}
+
+#title {
+	color: #afafff;
+	text-shadow: 0rem 0rem 0.2rem #ffffff;
+	margin-top: 1em;
+}
+
+#email {
+	text-align: center;
+}
+
+#navbar {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#column-center {
+	height: auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	width: 60%;
+}
+
+/* Panels are used as the main containers */
+.panel {
+	height: auto;
+	background-color: #303030;
+	box-shadow: 0em 0em .2em #000000;
+	overflow: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	position: relative;
+	text-align: center;
+}
+
+.panel p {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* End of file */

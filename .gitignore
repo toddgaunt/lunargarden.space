@@ -1,0 +1,27 @@
+# Ignore everything
+*
+
+# Whitelist subdirectories
+!*/
+
+# Whitelist the following extensions
+!*.c
+!*.h
+!*.w
+!*.tex
+!*.txt
+!*.sh
+!*.mk
+!*.l
+!*.y
+!*.html.m4
+!*.ttf
+!*.gif
+!*.css
+
+# Whitelist specific filenames
+!.gitignore
+!/README
+!/LICENSE
+!/Makefile
+!/404.html
