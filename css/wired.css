@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: love_letter;
-	src: local(love_letter_font), url(../res/ttf/love_letter.ttf) format('opentype');
+	src: local(love_letter_font), url(./love_letter.ttf) format('opentype');
 }
 
 h1 {

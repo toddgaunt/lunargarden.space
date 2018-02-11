@@ -3,7 +3,7 @@
 M4 = m4
 M4FLAGS = --prefix-builtins --include=m4
 
-SRC := index.html.m4
+SRC := index.html.m4 $(wildcard article/*.html.m4)
 OBJ := $(patsubst %.html.m4, %.html, $(SRC))
 
 # Standard targets
@@ -21,7 +21,7 @@ clean:
 	@rm -rf $(OBJ)
 
 # Object Build Rules
-%.html: %.html.m4
+%.html: %.html.m4 m4/site.m4
 	@echo "M4 $@"
 	@$(M4) $(M4FLAGS) $< > $@
 
