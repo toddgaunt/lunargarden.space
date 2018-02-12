@@ -3,7 +3,7 @@ m4_include(`site.m4')m4_dnl
 <!DOCTYPE html>
 <!--Author: Todd Gaunt-->
 <html>
-	HEADER(`Visceral Observer')
+	HEADER(`Blog')
 	<body>
 		TITLE
 		<div class="column-center">
