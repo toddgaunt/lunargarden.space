@@ -16,11 +16,12 @@ options:
 	@echo "M4      = $(M4)"
 
 dist: clean
+	@echo "Creating dist tarball TODO"
 
 clean:
 	@echo "Cleaning"
-	@rm -rf $(OBJ)
-	@rm index.html
+	@rm -f $(OBJ)
+	@rm -f index.html
 
 # Object Build Rules
 %.html: %.html.m4 m4/site.m4
