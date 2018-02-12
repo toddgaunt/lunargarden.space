@@ -141,8 +141,8 @@ ul {
 
 /* Gallery is used for showcasing an image */
 .gallery {
-	height: auto;
-	width: 40%;
+	width: auto;
+	height: 20vh;
 }
 
 /* End of file */
