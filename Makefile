@@ -8,7 +8,7 @@ OBJ := $(patsubst %.html.m4, %.html, $(SRC))
 
 # Standard targets
 all: $(OBJ)
-	ln -s blog.html index.html
+	@ln -sf blog.html index.html
 
 options:
 	@echo "Build options:"
