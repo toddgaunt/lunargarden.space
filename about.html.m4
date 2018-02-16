@@ -9,8 +9,7 @@ m4_include(`site.m4')m4_dnl
 		<div class="column-center">
 			<div class="panel">
 			<h2>About</h2>
-			<p>My nickname online is umbraa, and my real
-			name is Todd Gaunt. I am a programmer and visual artist
+			<p>My name is Todd Gaunt. I am a programmer and visual artist
 			with interest in language design, firearms, and individual
 			freedoms.</p>
 			
