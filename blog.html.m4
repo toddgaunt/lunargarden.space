@@ -7,7 +7,7 @@ m4_include(`site.m4')m4_dnl
 	<body>
 		TITLE
 		<div class="column-center">
-			POST(`1', `2018-02-15', `Micro Tetris', `Todd Gaunt')
+			POST(`1', `2018-02-15', `Hidamari', `Todd Gaunt')
 		</div>
 	</body>
 </html>

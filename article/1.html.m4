@@ -1,6 +1,6 @@
 m4_define(`ROOT_DIR', `../')m4_dnl
 m4_define(`POST_NUMBER', `1')m4_dnl
-m4_define(`POST_TITLE', `Micro Tetris')m4_dnl
+m4_define(`POST_TITLE', `Hidamari')m4_dnl
 m4_define(`POST_DATE', `2018-02-15')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
@@ -14,7 +14,7 @@ guidelines naming conventions, and tries to be as clear as possible. Below is
 a gameplay demo:<p>
 
 <video width=100% controls>
-  <source src="FILES_DIR/2018-02-15/utetris_demo.webm">
+  <source src="FILES_DIR/2018-02-15/hidamari_demo.webm">
   Your browser does not support the video tag.
 </video>
 
@@ -24,6 +24,6 @@ at least two players. Other modes could also be added on quite easily at some
 point later in time.</p>
 
 <p>If you're interested in playing, you can download the source
-tarball: <a href="FILES_DIR/2018-02-15/utetris.tar.gz">utetris.tar.gz</a>, or
+tarball: <a href="FILES_DIR/2018-02-15/hidamari.tar.gz">hidamari.tar.gz</a>, or
 pull the latest version with git: (Unavailable at this time).</p>
 POST_FOOTER
