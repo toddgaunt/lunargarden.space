@@ -13,7 +13,8 @@ m4_define(`TITLE', `m4_dnl
 		<p style="text-align: center;">
 		|<a href="'ROOT_DIR`about.html">About</a>|
 		|<a href="'ROOT_DIR`art.html">Art</a>|
-		|<a href="'ROOT_DIR`index.html">Blog</a>|
+		|<a href="'ROOT_DIR`blog.html">Blog</a>|
+		|<a href="'ROOT_DIR`wired.html">Wired</a>|
 		</p>
 		</div>')m4_dnl
 m4_define(`POST', `m4_dnl
