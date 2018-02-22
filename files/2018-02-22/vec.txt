@@ -1,0 +1,60 @@
+/* Generic vectors for C11 */
+/* Used to compute the next size for a vector when it grows */
+static inline size_t
+vec_npow2(size_t n)
+{
+	size_t next = 1;
+
+	if (n >= SIZE_MAX / 2) {
+		next = SIZE_MAX;
+	} else {
+		while (next < n)
+			next <<= 1;
+	}
+	return next;
+}
+/* The actual parameterized type */
+#define Vec(T) struct {T *data; size_t len; size_t size;}
+#define VEC_INIT {.data = NULL, .len = 0, .size = 0}
+
+#define VEC_CLEAR(V) ((V)->len = 0)
+#define VEC_CREATE(V) \
+	do { \
+		(V)->data = calloc(2, sizeof(*(V)->data)); \
+		if (!(V)->data) \
+			fprintf(stderr, "VEC initialization failure\n"); \
+		(V)->len = 0; \
+		(V)->size = 2; \
+	} while(0)
+/* These return like functions, due to being single expressions */
+#define VEC_DESTROY(V) free((V)->data)
+#define VEC_GET(V, I) (&(V)->data[(I)])
+/* Stack functionality */
+#define VEC_POP(V) ((V)->data[--(V)->len])
+#define VEC_PUSH(V, B) \
+	do { \
+		if ((V)->len >= (V)->size) { \
+			(V)->size = vec_npow2((V)->size + 1); \
+			(V)->data = realloc((V)->data, sizeof(*(V)->data) \
+					* (V)->size); \
+			if (!(V)->data) \
+				fprintf(stderr, "VEC reallocation failure\n"); \
+			memset(&(V)->data[(V)->len], 0, sizeof(*(V)->data) \
+					* ((V)->size - (V)->len)); \
+		} \
+		(V)->data[(V)->len] = (B); \
+		(V)->len += 1; \
+	} while(0)
+/* Manually reserve extra memory */
+#define VEC_RESERVE(V, N) \
+	do { \
+		if ((N) > (V)->size) { \
+			(V)->size = vec_npow2(N); \
+			(V)->data = realloc((V)->data, sizeof(*(V)->data) \
+					* (V)->size); \
+			if (!(V)->data) \
+				fprintf(stderr, "VEC reallocation failure\n"); \
+			memset(&(V)->data[(V)->len], 0, sizeof(*(V)->data) \
+					* ((V)->size - (V)->len)); \
+		} \
+	} while(0)
