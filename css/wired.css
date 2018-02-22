@@ -71,11 +71,17 @@ body {
 	font-weight: lighter;
 	color: #d7d7d7;
 	background-color: #1c1c1c;
+	font-size: 1em;
 }
 
 body, html {
 	height: auto%;
 	margin: 0;
+}
+
+pre, code {
+	font-weight: lighter;
+	font-size: .9em;
 }
 
 input {
@@ -118,9 +124,9 @@ ul {
 
 .column-center {
 	height: auto;
-	margin-left: 20%;
-	margin-right: 20%;
-	width: 60%;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
 }
 
 /* Panels are used as the main containers */
@@ -134,7 +140,7 @@ ul {
 	position: relative;
 }
 
-.panel p {
+.panel p, pre, h1, h2, h3, h4, h5 {
 	padding-left: 1em;
 	padding-right: 1em;
 }
