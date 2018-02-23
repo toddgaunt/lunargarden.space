@@ -2,7 +2,7 @@ m4_define(`HEADER', `m4_dnl
 		<head>
 		<title>Lunar Garden - $1</title>
 		<link href="'ROOT_DIR`css/wired.css" type="text/css" rel="stylesheet"/>
-		<link href="res/favicon.png" rel="icon"/>
+		<link href="'ROOT_DIR`res/favicon.png" rel="icon"/>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<meta charset="UTF-8"/>
 		</head>')m4_dnl
