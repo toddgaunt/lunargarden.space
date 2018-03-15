@@ -9,10 +9,11 @@ POST_HEADER
 code generation (cpp, m4) or <i style="white-space: nowrap;">void *</i>.
 The second method, <i style="white-space: nowrap;">void *</i>
 has the benefit of only having to compile once, but it throws type-safety out the
-window (which might be fine). Worse, however, is that for something like a vector
-it can only store pointers to elements, and not the actual elements themselves.</p>
+window. Worse, however, is that for something like a vector
+it can only store pointer-sized elements in the vector, which causes extra
+indirection when trying to store a vector of elements larger than pointers.
 
-<p>I decided to write generic vector using the first style that uses some C11 syntax tricks
+<p>I decided to write generic vector using cpp macros that uses some C11 syntax tricks
 to create a very C++ esque vector type that fits inside a single
 <a href="FILES_DIR/2018-02-22/vec.txt">C header file</a>, and is only 60 lines
 of code.</p>
