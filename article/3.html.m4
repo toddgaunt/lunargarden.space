@@ -8,7 +8,7 @@ POST_HEADER
 <p>In order to write an AI for Hidamari, my implementation of Tetris, first a representation of the game
 state that could use very little memory had to be devised. While the original
 implementation, a 2D array of 8-byte integers, could suffice as it only
-measured up to 624 bytes, A smaller footprint could be achieved by changing
+measured up to 624 bytes, a smaller footprint could be achieved by changing
 the game representation to a bit board of 16-bit integers. That is a binary
 representation
 of the game state, where an array of 16-bit integers is kept. Each integer
@@ -39,7 +39,7 @@ information can be added on and used by the graphical implementation seperately.
 <pre><code class="C">typedef struct {
 	Vec2 pos; /* Top-left position */
 	HidamariShape shape : 4;
-	u8 orientation : 3;
+	uint8_t orientation : 3;
 } Hidamari;
 
 typedef struct {

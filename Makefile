@@ -16,7 +16,9 @@ options:
 	@echo "M4      = $(M4)"
 
 dist: clean
-	@echo "Creating dist tarball TODO"
+	@printf -- "Creating dist tarball... "
+	@tar -czf lunargarden.tar.gz $(SRC) m4/ css/ files/ res/ Makefile 404.html
+	@echo "Done"
 
 clean:
 	@echo "Cleaning"
