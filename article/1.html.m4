@@ -11,12 +11,14 @@ guidelines as close as possible, as described
 <a href="http://tetris.wikia.com/wiki/Tetris_Guideline">here</a>. The
 source code is written in such a way that it mimics the official
 guidelines naming conventions, and tries to be as clear as possible. Below is
-a gameplay demo:<p>
+a gameplay demo:</p>
 
+<p>
 <video width=100% controls>
   <source src="FILES_DIR/2018-02-15/hidamari_demo.webm">
   Your browser does not support the video tag.
 </video>
+</p>
 
 <p>Current plans to extend this implementation are to add "wall kicks", a
 score and line counter display, an ncurses renderer, and networked play for

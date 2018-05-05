@@ -100,6 +100,17 @@ ul {
 	padding: 0;
 }
 
+table {
+	border-collapse: collapse;
+	border: 0.1em solid #878787;
+}
+
+table td {
+	border: 0.1em solid #878787;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
 #scanlines {
 	background-image: url("../res/wired/scanlines.gif");
 	background-repeat: repeat;
@@ -120,6 +131,12 @@ ul {
 	width: 60%;
 	margin-left: 20%;
 	margin-right: 20%;
+}
+
+.img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .column-center {
