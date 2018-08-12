@@ -16,7 +16,7 @@ evaluation function for Hidamari which allows it to play up to and beyond
 
 <p>The particle swarm algorithm used is about the same as the one that can
 viewed on <a href="https://en.wikipedia.org/wiki/Particle_swarm_optimization">wikipedia</a>.
-Modifications were made to cache the results of the fitness function were possible,
+Modifications were made to cache the results of the fitness function where possible,
 and the particles are processed asynchronously between threads rather than
 serially. This modification means that particles will update their velocity based
 on incomplete swarm information, since the best global fitness value for the

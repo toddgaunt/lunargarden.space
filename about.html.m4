@@ -13,9 +13,8 @@ m4_include(`site.m4')m4_dnl
 			with interest in language design, firearms, and individual
 			freedoms.</p>
 			
-			<p>To contact me, the only guaranteed
-			way that I will respond is through email with a well
-			written subject sent to EMAIL_ADDRESS</p>
+			<p>To contact me, the best way is to write a
+			well-written email to EMAIL_ADDRESS</p>
 
 			<p>Books that I like are <u>Heart of Darkness</u>,
 			by Joseph Conrad; <u>Do Androids Dream of Electric Sheep?</u>,
