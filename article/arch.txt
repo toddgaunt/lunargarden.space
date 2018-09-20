@@ -1,0 +1,6 @@
+The ideal machine architecture is memory-to-memory. This would require huge
+instructions however, 64 bits per memory address. This is why register machines
+exist, to reduce the number of bits by an instruction. Stack machines do this
+further, but in a very different way. Rather than limiting the amount of memory
+to randomly access, it creates a stack out of what would normally be the register
+space. This is simply less powerful than a random access register space.

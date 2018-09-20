@@ -1,13 +1,13 @@
 m4_define(`HEADER', `m4_dnl
 		<head>
 		<title>Lunar Garden - $1</title>
-		<link href="'ROOT_DIR`css/wired.css" type="text/css" rel="stylesheet"/>
+		<link href="'ROOT_DIR`css/automata.css" type="text/css" rel="stylesheet"/>
 		<link href="'ROOT_DIR`res/favicon.png" rel="icon"/>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<meta charset="UTF-8"/>
 		</head>')m4_dnl
 m4_define(`TITLE', `m4_dnl
-		<h1 id="title"><a style="color: #ffffff; text-shadow: 0em 0em 0.5em #afafff;" href="'ROOT_DIR`index.html">⌈LUNAR GARDEN⌋</a></h1>
+		<h1 id="title"><a id="titlelink" href="'ROOT_DIR`index.html">⌈LUNAR GARDEN⌋</a></h1>
 		<h4 id="email">'EMAIL_ADDRESS`</h4>
 		<div id="navbar">
 		<p style="text-align: center;">

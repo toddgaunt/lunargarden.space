@@ -1,0 +1,166 @@
+/* Author: Todd Gaunt */
+/*
+@font-face {
+	font-family: terminus;
+	src: local(terminus), url(../res/ttf/terminus_4.46.0.ttf) format('opentype');
+}
+*/
+
+@font-face {
+	font-family: love_letter;
+	src: local(love_letter_font), url(../res/ttf/love_letter.ttf) format('opentype');
+}
+
+h1 {
+	color: #45403a;
+	font-family: love_letter;
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+	text-shadow: 0rem 0rem 0.2rem #45403a;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2 {
+	border: solid #65605a;
+	border-width: 0.1rem 0;
+	font-weight: lighter;
+	letter-spacing: 0.5rem;
+	padding: 0.1rem 1rem;
+	text-shadow: 0rem 0rem .2rem #45403a;
+	text-align: center;
+}
+
+h3 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+h4 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+h5 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+h6 {
+	font-weight: lighter;
+	letter-spacing: 0.2rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #af8700;
+
+}
+
+a:hover, a:active {
+	color: #45403a;
+	text-shadow: 0em 0em 0.5em #45403a;
+}
+
+body {
+	font-family: terminus, serif;
+	letter-spacing: 0.1rem;
+	font-weight: lighter;
+	color: #45403a;
+	background-color: #d5d0ba;
+	font-size: 1em;
+}
+
+body, html {
+	height: auto%;
+	margin: 0;
+}
+
+pre, code {
+	font-weight: lighter;
+	font-size: .9em;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border: 0.1em solid #65605a;
+}
+
+table td {
+	border: 0.1em solid #65605a;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+#scanlines {
+	background-image: url("../res/wired/scanlines.gif");
+	background-repeat: repeat;
+	background-size: 9px 9px;
+}
+
+#title {
+	color: #45403a;
+	text-shadow: 0rem 0rem 0.2rem #45403a;
+	margin-top: 1em;
+}
+
+#titlelink {
+	color: #45403a;
+	text-shadow: 0em 0em 0.5em #45403a;
+}
+
+#email {
+	text-align: center;
+}
+
+#navbar {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column-center {
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+}
+
+/* Panels are used as the main containers */
+.panel {
+	height: auto;
+	background-color: #d5d0ba;
+	box-shadow: 0em 0em .2em #65605a;
+	overflow: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	position: relative;
+}
+
+.panel p, pre, h1, h2, h3, h4, h5 {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* Gallery is used for showcasing an image */
+.gallery {
+	width: auto;
+	height: 20vh;
+}
+
+/* End of file */
