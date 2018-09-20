@@ -16,7 +16,6 @@ h1 {
 	font-family: love_letter;
 	font-weight: lighter;
 	letter-spacing: 0.5rem;
-	text-shadow: 0rem 0rem 0.2rem #45403a;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -27,7 +26,6 @@ h2 {
 	font-weight: lighter;
 	letter-spacing: 0.5rem;
 	padding: 0.1rem 1rem;
-	text-shadow: 0rem 0rem .2rem #45403a;
 	text-align: center;
 }
 
@@ -101,6 +99,10 @@ table td {
 	padding-right: 0.4em;
 }
 
+table th {
+	text-align: left;
+}
+
 #scanlines {
 	background-image: url("../res/wired/scanlines.gif");
 	background-repeat: repeat;
@@ -109,13 +111,13 @@ table td {
 
 #title {
 	color: #45403a;
-	text-shadow: 0rem 0rem 0.2rem #45403a;
+	text-shadow: 0rem 0rem 0.0rem #000000;
 	margin-top: 1em;
 }
 
 #titlelink {
 	color: #45403a;
-	text-shadow: 0em 0em 0.5em #45403a;
+	text-shadow: 0em 0em 0em #000000;
 }
 
 #email {
@@ -152,7 +154,7 @@ table td {
 	position: relative;
 }
 
-.panel p, pre, h1, h2, h3, h4, h5 {
+.panel * {
 	padding-left: 1em;
 	padding-right: 1em;
 }
