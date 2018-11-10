@@ -1,6 +1,6 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `6')m4_dnl
-m4_define(`POST_TITLE', `Optimizing Tetris AI with an Asynchronous Particle Swarm')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/6')m4_dnl
+m4_define(`POST_TITLE', `Paper - Optimizing Tetris AI with an Asynchronous Particle Swarm')m4_dnl
 m4_define(`POST_DATE', `2018-05-12')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl

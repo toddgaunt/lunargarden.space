@@ -19,9 +19,9 @@ m4_define(`TITLE', `m4_dnl
 		</div>')m4_dnl
 m4_define(`POST', `m4_dnl
 		<div style="text-align: center;" class="panel">
-		<h2>Post #$1</h2>
+		<h2 id="post$1">Post $1</h2>
 		<h4>$2</h4>
-		<a href="article/$1.html" id="post$1"><h4>$3</h4></a>
+		<a href="post/$1.html"><h4>$3</h4></a>
 		<h5>-$4</h5>
 		<h6><a href="#title">• top •</a></h6>
 		</div>')m4_dnl

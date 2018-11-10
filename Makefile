@@ -3,7 +3,7 @@
 M4 = m4
 M4FLAGS = --prefix-builtins --include=m4
 
-SRC := wired.html.m4 about.html.m4 art.html.m4 blog.html.m4 $(wildcard article/*.html.m4)
+SRC := wired.html.m4 about.html.m4 art.html.m4 blog.html.m4 $(wildcard post/*/*.html.m4)
 OBJ := $(patsubst %.html.m4, %.html, $(SRC))
 
 # Standard targets

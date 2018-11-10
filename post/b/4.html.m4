@@ -1,5 +1,5 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `4')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/4')m4_dnl
 m4_define(`POST_TITLE', `An Efficient AI for Hidamari')m4_dnl
 m4_define(`POST_DATE', `2018-04-26')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl

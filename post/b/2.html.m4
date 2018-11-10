@@ -1,5 +1,5 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `2')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/2')m4_dnl
 m4_define(`POST_TITLE', `Generic Vectors in C')m4_dnl
 m4_define(`POST_DATE', `2018-02-22')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl

@@ -1,5 +1,5 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `5')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/5')m4_dnl
 m4_define(`POST_TITLE', `Utilizing Particle Swarms to Optimize Hidamari')m4_dnl
 m4_define(`POST_DATE', `2018-05-05')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl

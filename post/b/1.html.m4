@@ -1,5 +1,5 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `1')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/1')m4_dnl
 m4_define(`POST_TITLE', `Hidamari')m4_dnl
 m4_define(`POST_DATE', `2018-02-15')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl

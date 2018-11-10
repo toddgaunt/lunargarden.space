@@ -1,5 +1,5 @@
-m4_define(`ROOT_DIR', `../')m4_dnl
-m4_define(`POST_NUMBER', `3')m4_dnl
+m4_define(`ROOT_DIR', `../../')m4_dnl
+m4_define(`POST_NUMBER', `b/3')m4_dnl
 m4_define(`POST_TITLE', `A Bit Board Representation for Hidamari')m4_dnl
 m4_define(`POST_DATE', `2018-04-17')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
