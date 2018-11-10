@@ -9,12 +9,15 @@ m4_include(`site.m4')m4_dnl
 		<div class="column-center">
 			<div class="panel">
 			<h2>About</h2>
-			<p>My name is Todd Gaunt. I am a programmer and visual artist
-			with interest in language design, firearms, and individual
-			freedoms.</p>
+			<p>Hello, my name is Todd Gaunt, and this is my
+			portfolio site. You can find my artwork, programs,
+			and blog in the header. My main interests are
+			programming language design and compiler development,
+			hiking and camping, and drawing.</p>
+
+			<p>I also enjoy confectionery and firearms.</p>
 			
-			<p>To contact me, the best way is to write a
-			well-written email to EMAIL_ADDRESS</p>
+			<p>To contact me, email me at EMAIL_ADDRESS</p>
 
 			<p>Books that I like are <u>Heart of Darkness</u>,
 			by Joseph Conrad; <u>Do Androids Dream of Electric Sheep?</u>,
