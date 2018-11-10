@@ -14,12 +14,13 @@ m4_define(`TITLE', `m4_dnl
 		|<a href="'ROOT_DIR`about.html">About</a>|
 		|<a href="'ROOT_DIR`art.html">Art</a>|
 		|<a href="'ROOT_DIR`blog.html">Blog</a>|
+		|<a href="'ROOT_DIR`programs.html">Programs</a>|
 		|<a href="'ROOT_DIR`wired.html">Wired</a>|
 		</p>
 		</div>')m4_dnl
 m4_define(`POST', `m4_dnl
 		<div style="text-align: center;" class="panel">
-		<h2 id="post$1">Post $1</h2>
+		<h2 id="post$1">$1</h2>
 		<h4>$2</h4>
 		<a href="post/$1.html"><h4>$3</h4></a>
 		<h5>-$4</h5>
