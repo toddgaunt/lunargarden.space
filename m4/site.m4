@@ -54,3 +54,7 @@ m4_define(`IMAGE_POST', `m4_dnl
 		</div>')m4_dnl
 m4_define(`FILES_DIR', ROOT_DIR`files')m4_dnl
 m4_define(`EMAIL_ADDRESS', `toddgaunt@protonmail.ch')m4_dnl
+m4_define(`LQ',`m4_changequote(<,>)`dnl'
+m4_changequote`'')
+m4_define(`RQ',`m4_changequote(<,>)dnl`
+'m4_changequote`'')

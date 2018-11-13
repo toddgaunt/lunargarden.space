@@ -143,6 +143,17 @@ table th {
 	width: 80%;
 }
 
+.centered {
+	text-align: center;
+}
+
+pre {
+	display: inline-block;
+	text-align: left;
+	white-space: pre-wrap;
+	word-break: keep-all;
+}
+
 /* Panels are used as the main containers */
 .panel {
 	height: auto;
