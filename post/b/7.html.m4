@@ -26,9 +26,9 @@ why it is named C2; the language reflects how I wish I could improve C. Similar
 to C++ in spirit, but much different in method. Rather than pretending to
 maintain backwards compatibility, that idea is eschewed in favor of simply
 maintaining familiar syntax that is only changed as necessary to reduce parser
-ambiguity and leveraging new features that are worth the change.
+ambiguity to leverage new features that are worth the change.
 
-Features on the planning block include but are not limited to: lambdas,
+Features on the roadmap include but are not limited to: lambdas,
 explicit & implicit variable capture, function overloading, automatic currying,
 prefix & infix operators, manual memory management, pointers & pointer arithmetic,
 basic type inference, generic functions, and parameterized types.
