@@ -110,8 +110,8 @@ token matching is independent of grammar context. The grammar:
     Category       | Operators
     ---------------+----------------------------------
     prime          | ...
-    unary          |  * & ! ~ + -
-    infix          |  '[^']'
+    unary          | * & ! ~ + -
+    infix          | INFIX_IDENT
     multiplicative | * / % << >> &
     additive       | + - | ^
     comparative    | == != <= >= < >
