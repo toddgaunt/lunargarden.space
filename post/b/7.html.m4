@@ -1,13 +1,16 @@
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `b/6')m4_dnl
-m4_define(`POST_TITLE', `Grammar of the C2 Programming Language')m4_dnl
-m4_define(`POST_DATE', `2018-05-12')m4_dnl
+m4_define(`POST_TITLE', `C2 Part One - An Introduction; Grammar and Tokens')m4_dnl
+m4_define(`POST_DATE', `2018-11-12')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
 POST_HEADER
 m4_changequote(`$%^?!', `!?^%$')
 <div class="centered">
+<!--<p>Part Two can be read <a href="8.html">here</a></p>-->
 <pre>
+## Introduction
+
 Over the past two years I have been working on various compilers that were
 developed to various stages of incompletion. Each language designed has been
 a stepping stone towards the next language, an iterative process, that has
@@ -24,6 +27,16 @@ to C++ in spirit, but much different in method. Rather than pretending to
 maintain backwards compatibility, that idea is eschewed in favor of simply
 maintaining familiar syntax that is only changed as necessary to reduce parser
 ambiguity and leveraging new features that are worth the change.
+
+Features on the planning block include but are not limited to: lambdas,
+explicit & implicit variable capture, function overloading, automatic currying,
+prefix & infix operators, manual memory management, pointers & pointer arithmetic,
+basic type inference, generic functions, and parameterized types.
+
+For all of these features, the language syntax was designed to keep
+refactoring code easy, be unambiguous, and be fast to parse.
+
+## Grammar and Tokens
 
 The grammar for C2 is very simple, and was designed with making the writing
 of a hand-made recursive descent parser in mind. It should be easy to
@@ -133,11 +146,14 @@ default. The benefit of such a detail is that a user can define his
 own infix notation, and is able to use what are traditionally thought
 of as special operators in the same way as functions.
 
-This is all I will be covering in this post. A seperate post
-will be written sometime in the future covering the semantics of the
-language. Features such as function overloading, automatic currying,
-type inference, tail-call elimination, generic functions, generic types,
-and how they all mesh together will be covered at a later date.
+The lowest precedence operator that is still above assignment is the 'cons'
+operator, or tuple construction operator, represented with , (comma). This comma
+is one of the basic building blocks for how expressions in C2 are formed, and
+adds a very useful data structure to the language in the form of easy
+to define and construct data aggregates, otherwise known as tuples.
+
+Otherwise, most operators behave the same as they would in C, and are
+by default implemented for all primitive types as appropriate.
 </pre>
 </div>
 m4_changequote($%^?!`!?^%$, $%^?!'!?^%$)

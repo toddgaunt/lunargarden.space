@@ -7,7 +7,7 @@ m4_include(`site.m4')m4_dnl
 	<body>
 		TITLE
 		<div class="column-center">
-			POST(`b/7', `2018-11-12', `Grammar of the C2 Programming Language', `Todd Gaunt')
+			POST(`b/7', `2018-11-12', `C2 Part One - An Introduction; Grammar and Tokens', `Todd Gaunt')
 			POST(`b/6', `2018-05-12', `Paper - Optimizing Tetris AI with an Asynchronous Particle Swarm', `Todd Gaunt')
 			POST(`b/5', `2018-05-05', `Utilizing Particle Swarms to Optimize Hidamari', `Todd Gaunt')
 			POST(`b/4', `2018-04-26', `An Efficient AI for Hidamari', `Todd Gaunt')
