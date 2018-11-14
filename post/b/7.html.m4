@@ -162,7 +162,7 @@ be explained, as that is for a later post. But it should be pretty straight-
 forward to understand for someone familiar with C, C++, or Rust syntax and
 semantics.
 
-	-- Variable Declaration --
+	/* Variable Declaration */
 
 	let a : u8 = 5;	
 	let b : u16 = 5;
@@ -170,7 +170,7 @@ semantics.
 	let d : f32 = 3.14;
 	let e : f64 = 2.71 + (d as f64);
 
-	-- Function Definition and Overloading --
+	/* Function Definition and Overloading */
 
 	let f = fn (x : u32, y : u32) -> u32 {
 		x / y + y / x;
@@ -183,12 +183,12 @@ semantics.
 	f(2, 4);
 	f(3.14, 2.71);
 
-	-- Defining Aggregate and Sum Types --
+	/* Defining Aggregate and Sum Types */
 
 	type Vec3 = (x : i32, y : i32, z : i32);
 	type u8_or_f32 = u : u8 | f : f32;
 
-	-- Defining and Using an Infix Function --
+	/* Defining and Using an Infix Function */
 
 	let a : Vec3 = (1, 2, 3);
 	let b : Vec3 = (2, 2, 2);
@@ -203,7 +203,7 @@ semantics.
 
 	let c = a 'cross' b;
 
-	-- Using an Operator as a Prefix Function --
+	/* Using an Operator as a Prefix Function */
 
 	let x = 5;
 	let y = 2;
