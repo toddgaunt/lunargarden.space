@@ -37,8 +37,10 @@ m4_define(`POST_HEADER', `m4_dnl
 		<div class="panel">
 		<h2 style="text-align: center">POST_TITLE()</h2>
 		<h4 style="text-align: center">POST_DATE()</h4>
+		<div class="panel-content">
 		')m4_dnl
 m4_define(`POST_FOOTER', `m4_dnl
+		</div>
 		<h5 style="text-align: center">-POST_AUTHOR()</h5>
 		<h6 style="text-align: center"><a href="'ROOT_DIR()`blog.html#post'POST_NUMBER()`">• return •</a></h6>
 		</div>
