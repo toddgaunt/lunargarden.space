@@ -49,14 +49,16 @@ m4_define(`POST_FOOTER', `m4_dnl
 		</html>')m4_dnl
 m4_define(`IMAGE_POST', `m4_dnl
 		<div style="text-align:center" class="panel">
-		<h2>$1</h2>
+		<h2 id="image-post$1">$1</h2>
 		<h4>$2</h4>
-		<a href="'ROOT_DIR`res/art/$2_$3.$4"><img alt="$1" class="gallery" src="'ROOT_DIR`res/art/$2_$3.thumb"></a>
+		<a href="'ROOT_DIR`post/$1.html"><img class="thumb" src="'ROOT_DIR`res/thumb/$2/$3" alt="$4"></a>
+		<h5>-$5</h5>
 		<h6><a href="#title">• top •</a></h6>
 		</div>')m4_dnl
+m4_define(`GALLERY', `<a href="$1"><img class="gallery" src="$1" alt="$2"></a>')m4_dnl
 m4_define(`FILES_DIR', ROOT_DIR`files')m4_dnl
 m4_define(`EMAIL_ADDRESS', `toddgaunt@protonmail.ch')m4_dnl
-m4_define(`LQ',`m4_changequote(<,>)`dnl'
+m4_define(`LQ',`m4_changequote(<,>)`m4_dnl'
 m4_changequote`'')
-m4_define(`RQ',`m4_changequote(<,>)dnl`
+m4_define(`RQ',`m4_changequote(<,>)m4_dnl`
 'm4_changequote`'')

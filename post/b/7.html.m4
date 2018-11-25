@@ -1,5 +1,5 @@
 m4_define(`ROOT_DIR', `../../')m4_dnl
-m4_define(`POST_NUMBER', `b/6')m4_dnl
+m4_define(`POST_NUMBER', `b/7')m4_dnl
 m4_define(`POST_TITLE', `C2 Part One - An Introduction; Grammar and Tokens')m4_dnl
 m4_define(`POST_DATE', `2018-11-12')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl

@@ -162,7 +162,6 @@ pre {
 	overflow: auto;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	position: relative;
 }
 
 .panel-content {
@@ -170,10 +169,15 @@ pre {
 	padding-right: 1em;
 }
 
-/* Gallery is used for showcasing an image */
+/* Thumb is used for showcasing an image for a link */
+.thumb {
+	max-width: 100%;
+	max-height: 20vh;
+}
+
 .gallery {
-	width: auto;
-	height: 20vh;
+	max-width: 100%;
+	max-height: 80vh;
 }
 
 /* End of file */
