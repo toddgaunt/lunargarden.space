@@ -21,10 +21,12 @@ m4_define(`TITLE', `m4_dnl
 m4_define(`POST', `m4_dnl
 		<div style="text-align: center;" class="panel">
 		<h2 id="post$1">$1</h2>
+		<div class="panel-content">
 		<h4>$2</h4>
 		<a href="post/$1.html"><h4>$3</h4></a>
 		<h5>-$4</h5>
 		<h6><a href="#title">• top •</a></h6>
+		</div>
 		</div>')m4_dnl
 m4_define(`POST_HEADER', `m4_dnl
 		<!DOCTYPE html>

@@ -7,8 +7,9 @@ m4_include(`site.m4')m4_dnl
 	<body>
 		TITLE
 		<div class="column-center">
-			<div class="panel">
-			<h2>About</h2>
+		<div class="panel">
+		<h2>About</h2>
+		<div class="panel-content">
 			<p>Hello, my name is Todd Gaunt, and this is my
 			portfolio site. You can find my artwork, programs,
 			and blog in the header. My main interests are
@@ -23,7 +24,8 @@ m4_include(`site.m4')m4_dnl
 			by Joseph Conrad; <u>Do Androids Dream of Electric Sheep?</u>,
 			by Philip K. Dick; <u>Cat's Cradle</u>, by Kurt Vonnegut;
 			and <u>Walden</u>, by Henry David Thoreau.</p>
-			</div>
+		</div>
+		</div>
 		</div>
 	</body>
 </html>
