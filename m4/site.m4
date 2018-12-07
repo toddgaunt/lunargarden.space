@@ -57,6 +57,27 @@ m4_define(`IMAGE_POST', `m4_dnl
 		<h5>-$5</h5>
 		<h6><a href="#title">• top •</a></h6>
 		</div>')m4_dnl
+m4_define(`IMAGE_POST_HEADER', `m4_dnl
+		<!DOCTYPE html>
+		<!--Author: Todd Gaunt-->
+		<html>
+		HEADER(POST_TITLE())
+		<body>
+		TITLE
+		<div class="column-center">
+		<div class="panel">
+		<h2 style="text-align: center">POST_TITLE()</h2>
+		<h4 style="text-align: center">POST_DATE()</h4>
+		<div class="panel-content">
+		')m4_dnl
+m4_define(`IMAGE_POST_FOOTER', `m4_dnl
+		</div>
+		<h5 style="text-align: center">-POST_AUTHOR()</h5>
+		<h6 style="text-align: center"><a href="'ROOT_DIR()`art.html#image-post'POST_NUMBER()`">• return •</a></h6>
+		</div>
+		</div>
+		</body>
+		</html>')m4_dnl
 m4_define(`GALLERY', `<a href="$1"><img class="gallery" src="$1" alt="$2"></a>')m4_dnl
 m4_define(`FILES_DIR', ROOT_DIR`files')m4_dnl
 m4_define(`EMAIL_ADDRESS', `toddgaunt@protonmail.ch')m4_dnl
