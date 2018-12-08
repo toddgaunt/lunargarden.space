@@ -1,20 +1,29 @@
+m4_include(`macro.m4')m4_dnl
 m4_define(`ROOT_DIR', `../../')m4_dnl
-m4_define(`POST_NUMBER', `b/6')m4_dnl
-m4_define(`POST_TITLE', `Grammar of the C2 Programming Language')m4_dnl
-m4_define(`POST_DATE', `2018-05-12')m4_dnl
+m4_define(`POST_NUMBER', `b/8')m4_dnl
+m4_define(`POST_TITLE', `Ocarina Tabs: Saria'RQ`s Song')m4_dnl
+m4_define(`POST_DATE', `2018-12-08')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
 POST_HEADER
-m4_changequote(`$%^?!', `!?^%$')
-<div class="centered">
-<!--<p>Part One can be read <a href="7.html">here</a></p>-->
+<div style="text-align: center;">
 <pre>
-This is all I will be covering in this post. A seperate post
-will be written sometime in the future covering the semantics of the
-language. Features such as function overloading, automatic currying,
-type inference, tail-call elimination, generic functions, generic types,
-and how they all mesh together will be covered at a later date.
+A 10 hole ocarina is required for play. The full song is found at the
+bottom-left of the page. Each letter in the song corresponds to a letter
+above one of the rows of notes. To play the song, follow each grouping
+of notes indicated by the letters at the bottom of the page in-order.
+The black bars between notes indicate rests, with one bar being one rest,
+two bars being two rests, and so on.
 </pre>
+
+<br>
+
+<pre>
+The song below is designed to be printed out on 8.5x11" paper at 300 dpi.
+</pre>
+
+<br>
+
+GALLERY(FILES_DIR`/2018-12-08/sarias_song.png', `Ocarina tab sheet for Saria'RQ`Song')
 </div>
-m4_changequote($%^?!`!?^%$, $%^?!'!?^%$)
 POST_FOOTER

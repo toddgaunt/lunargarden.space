@@ -1,3 +1,4 @@
+m4_include(`macro.m4')m4_dnl
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `b/7')m4_dnl
 m4_define(`POST_TITLE', `')m4_dnl

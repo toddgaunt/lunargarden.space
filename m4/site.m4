@@ -81,7 +81,3 @@ m4_define(`IMAGE_POST_FOOTER', `m4_dnl
 m4_define(`GALLERY', `<a href="$1"><img class="gallery" src="$1" alt="$2"></a>')m4_dnl
 m4_define(`FILES_DIR', ROOT_DIR`files')m4_dnl
 m4_define(`EMAIL_ADDRESS', `toddgaunt@protonmail.ch')m4_dnl
-m4_define(`LQ',`m4_changequote(<,>)`m4_dnl'
-m4_changequote`'')
-m4_define(`RQ',`m4_changequote(<,>)m4_dnl`
-'m4_changequote`'')

@@ -1,3 +1,4 @@
+m4_include(`macro.m4')m4_dnl
 m4_define(`ROOT_DIR', `')m4_dnl
 m4_include(`site.m4')m4_dnl
 <!DOCTYPE html>
