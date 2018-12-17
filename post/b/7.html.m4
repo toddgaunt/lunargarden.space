@@ -1,7 +1,7 @@
 m4_include(`macro.m4')m4_dnl
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `b/7')m4_dnl
-m4_define(`POST_TITLE', `')m4_dnl
+m4_define(`POST_TITLE', `C2 Language Grammar')m4_dnl
 m4_define(`POST_DATE', `2018-11-12')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
@@ -19,19 +19,21 @@ landed me at the current language I am developing now, C2. This may be the
 language I stick with and develop a fully-featured compiler for, or it may not
 be. Only time will tell.
 
-I am, however, much more satisfied by the design and feature-set of this
-language than all my prior ones, as I believe it hits a sweet spot
-between comfort, ease-of-adoption, powerful features found in modern
-languages, and the manual control of a language like C. This is actually
-why it is named C2; the language reflects how I wish I could improve C. Similar
-to C++ in spirit, but much different in method. Rather than pretending to
-maintain backwards compatibility, that idea is eschewed in favor of simply
-maintaining familiar syntax that is only changed as necessary to reduce parser
-ambiguity to leverage new features that are worth the change.
+I am, however, much more satisfied by the design and planned feature-set of
+this language than all my prior ones, as I believe it hits a sweet spot
+between comfort, ease-of-adoption, having a modern feature set, and the manual
+control of a language like C. This is where it gets its name, C2, from
+reflecting how I wish I could improve C, my favorite programming language.
+Similar to C++ in spirit, but much different in method, C2 aims to heal warts
+of the C language, and add modern features found in other languages that
+complement what C does best: manual memory-management and performance.
+Rather than pretending to maintain backwards compatibility, while the syntax
+should look familiar to any ALGOL programmer, the language is quite visually
+distinct to accomodate the new features and to remove language ambiguity.
 
 Features on the roadmap include but are not limited to: lambdas,
-explicit & implicit variable capture, function overloading, automatic currying,
-prefix & infix operators, manual memory management, pointers & pointer arithmetic,
+explicit and implicit variable capture, function overloading, automatic currying,
+prefix and infix operators, manual memory management, pointers and pointer arithmetic,
 basic type inference, generic functions, and parameterized types.
 
 For all of these features, the language syntax was designed to keep
@@ -49,64 +51,60 @@ token matching is independent of grammar context. The grammar:
 
                          THE C2 LANGUAGE GRAMMAR
 
-    start           :(expr ';') EOF
-    ;
-    expr            :'let' ident ((':' type ['=' expr]) | ("=" expr)) ['as' type]
-		    | assignment ['as' type]
-    ;
-    assignment      :cons (('=' | '+=' | '-=' | '|=' | '^='
-		    | '*=' | '/=' | '%=' | '<<=' | '>>=' | '&=') cons)*
-    ;
-    cons            :logical_or (',' logical_or)*
-    ;
-    logical_or      :logical_and ('||' logical_and)*
-    ;
-    logical_and     :comparative ('&&' comparative)*
-    ;
-    comparative     :additive (('==' | '!=' | '<=' | '>=' | '<' | '>') additive)*
-    ;
-    additive        :multiplicative (('+' | '-' | '|' | '^') multiplicative)*
-    ;
-    multiplicative  :infix (('*' | '/' | '%' | '<<' | '>>' | '&') infix)*
-    ;
-    infix           : unary (INFIX_IDENT unary)*
-    ;
-    unary           : ('*' | '&' | '!' | '~' | '+' | '-') unary | prime
-    ;
-    prime           : ['fn' type] ['[' [ident] [',' ident]* ']'] '{ stmt* '}
-		    | '(' expr ')'
-		    | BINARY_LIT | INTEGER_LIT | HEX_LIT
-		    | RADIX_LIT
-		    | STRING_LIT
-		    | ALPHANUMERIC_IDENT | PREFIX_IDENT
-		    | expr ('(' expr ')')*
-    ;
-    ident           : ALPHANUMERIC_IDENT | PREFIX_IDENT | INFIX_IDENT
-    ;
-    type            : type_or ('->' type_or)*
-    ;
-    type_cons       : type_prime (',' type_prime)*
-    ;
-    type_union      : type_prime ('|' type_prime)*
-    ;
-    type_prime      : ALPHANUMERIC_IDENT [':' type]
-    ;
+   decimal_digit   = "0" ... "9"
+   hex_digit       = "0" ... "9" | "A" ... "F" | "a" ... "f" .
+   binary_lit      = "0" ("b" | "B") {"0" | "1"} .
+   octal_lit       = "0" {"0" ... "7"} .
+   decimal_lit     = ("1" ... "9") { decimal_digit } .
+   hex_lit         = "0" ("x" | "X") hex_digit {hex_digit} .
+   integer_lit     = binary_lit | octal_lit | decimal_lit | hex_lit .
+   float_lit       = {decimal_digit} "." decimal_digit {decimal_digit} .
+   string_lit      = `"` {UNICODE_LETTER} `"` .
 
-		     THE C2 TOKEN REGULAR EXPRESSIONS
+   normal_ident    = ASCII_LETTER { ASCII_LETTER | "0" ... "9" } .
+   prefix_ident    = "`" {UNICODE_LETTER} "`" .
+   infix_ident     = "'" {UNICODE_LETTER} "'" .
+   ident           = normal_ident | prefix_ident | infix_ident .
 
-    Token              | Regex                 | Example
-    -------------------+-----------------------+--------
-    ALPHANUMERIC_IDENT | [a-zA-Z][a-zA-Z0-9_]* | var_name
-    PREFIX_IDENT       | '[^']'                | `A*`
-    INFIX_IDENT        | `[^`]*`               | 'cross product'
-    BINARY_LIT         | 0b[01]+               | 0b0101010
-    INTEGER_LIT        | [0-9]+                | 42
-    HEX_LIT            | 0x[a-fA-F0-9]+        | 0x2A
-    RADIX_LIT          | [0-9]*\.[0-9]+        | .42
-    STRING_LIT         | "[^"]"                | "hello world\n"
+   type_primary    = "(" type ")" | normal_ident [":" type_unary ] .
+   type_unary      = {"*" | "[" integer_lit "]"} type_primary .
+   type_function   = type_unary {"->" type_unary} .
+   type_union      = type_function {"|" type_function} .
+   type_cons       = type_union {"," type_union} .
+   type            = type_cons .
 
+   block           = [ "[" [ident { "," ident }] "]" ] "{" { ";" | expr ";" } "}" .
+   primary         = integer_lit
+                   | float_lit
+                   | string_lit
+                   | ident [":"]
+                   | "(" expr ")"
+                   | "type" ident type
+                   | "if" "(" expr ")" expr ";" {"else" "if" "(" expr ")" expr ";"} ["else" expr ";"]
+                   | "for" ["(" expr [";" expr] [";" expr] ")"] expr
+                   | "let" ident {"(" [ident {"," ident}] ")"} [":" type] "=" expr
+                   | "goto" ident
+                   | "type" ident type
+                   | "lambda" {"(" [ident {"," ident}] ")"} [":" type] "=" expr
+                   | block
 
-	     THE C2 LANGUAGE OPERTOR PRECEDENCE (EXCLUDING PRIME)
+   prefix          = { "*" | "&" | "!" | "~" | "+" | "-" } primary .
+   postfix         = prefix {"[" expr "]" | "(" expr ")" | "as" type} .
+
+   infix           = postfix {infix_ident postfix} .
+   multiplicative  = infix {("*" | "/" | "%" | "<<" | ">>" | "&") infix} .
+   additive        = multiplicative {("+" | "-" | "|" | "^") multiplicative} .
+   comparative     = additive {("==" | "!=" | "<=" | ">=" | "<" | ">") additive} .
+   logical_and     = comparative {"&&" comparative} .
+   logical_or      = logical_and {"||" logical_and} .
+   cons            = logical_or {"," logical_or} .
+   assignment      = cons {("=" | "*=" | "/=" | "%=" | "<<=" | ">>=" | "&="
+                                | "+=" | "-=" | "|=" | "^=") cons} .
+   expr            = assignment .
+
+   start           = {";" | expr ";"} EOF .
+
+         THE C2 LANGUAGE OPERTOR PRECEDENCE (EXCLUDING PRIME)
 
     Category       | Operators
     ---------------+----------------------------------
@@ -122,22 +120,23 @@ token matching is independent of grammar context. The grammar:
     assignment     | = += -= |= ^= *= /= %= <<= >>= &=
 
 The operator precedence for the language is baked into the grammar for the
-language if written using a recursive descent parser. Unlike many languages,
-C2 breaks some precedence rules established from C, but for good reason. Some
-precedence rules broken here are moving the bitwise '|' (or) and '&' (and)
-into the additive and multiplicative categories respectively. The bit-shift
-operators have been moved to the multiplicative category as well. Otherwise
-precedence remains identical for pre-defined infix operators. A special
-level of precedence was added for custom infix operators just below
+language if written using a recursive descent parser. C2 breaks some precedence
+rules established from C, but for good reason. Some precedence rules broken
+here are moving the bitwise '|' (or) and '&' (and) into the additive and
+multiplicative categories respectively. The bit-shift operators have been moved
+to the multiplicative category as well. Otherwise precedence remains identical
+for pre-defined infix operators.
+    
+A special level of precedence was added for custom infix operators just below
 unary operators, yet higher than all other binary operators. This
-precedence level is for the special INFIX_IDENT form, which allows
-users to use any identifier enclosed by single quotes, including pre-defined
-binary operators, in infix form given that it is a binary function e.g.
-f(5)(6) and 5 'f' 6 are equivalent.
+precedence level is for the special infix identifer form, which allows
+users to enclose any identifier with single quotes to use it
+as a binary operator e.g. f(5)(6) and 5 'f' 6 are equivalent excepting
+precedence.
 
-To complement this infix form, the PREFIX_IDENT form is also in the language,
-allowing any characters enclosed by backticks/grave accents to be used in
-the prefix calling form e.g. 5 + 6 and `+`(5)(6) are equivalent in all ways
+To complement this infix form, a prefix identifier form is also in the language,
+allowing any identifiers enclosed by backticks to be used in the standard
+prefix calling form e.g. 5 + 6 and `+`(5)(6) are equivalent in all ways
 except precedence.
 
 These special identification forms work because in C2, operators and functions
@@ -150,8 +149,8 @@ of as special operators in the same way as functions.
 The lowest precedence operator that is still above assignment is the 'cons'
 operator, or tuple construction operator, represented with , (comma). This comma
 is one of the basic building blocks for how expressions in C2 are formed, and
-adds a very useful data structure to the language in the form of easy
-to define and construct data aggregates, otherwise known as tuples.
+adds a very useful data structure to the language for building data aggregates,
+otherwise known as tuples.
 
 Otherwise, most operators behave the same as they would in C, and are
 by default implemented for all primitive types as appropriate.
@@ -163,53 +162,48 @@ be explained, as that is for a later post. But it should be pretty straight-
 forward to understand for someone familiar with C, C++, or Rust syntax and
 semantics.
 
-	/* Variable Declaration */
+    /* Variable Declaration */
 
-	let a : u8 = 5;	
-	let b : u16 = 5;
-	let c : i32 = b as i32;
-	let d : f32 = 3.14;
-	let e : f64 = 2.71 + (d as f64);
+    let a : u8 = 5;    
+    let b : u16 = 5;
+    let c : i32 = b as i32;
+    let d : f32 = 3.14;
+    let e : f64 = 2.71 + (d as f64);
 
-	/* Function Definition and Overloading */
+    /* Function Declaration */
 
-	let f = fn (x : u32, y : u32) -> u32 {
-		x / y + y / x;
-	}
+    let f(x, y) : (u32, u32) -> u32 = {
+        x / y + y / x;
+    }
 
-	let f = fn (x : f32, y : f32) -> f32 {
-		x / y + y / x;
-	}
+    let g(a)(b)(c) : f32 -> f32 -> f32 -> f32 = {
+        a * b * c;
+    }
 
-	f(2, 4);
-	f(3.14, 2.71);
+    f(2, 4);
+    g(1)(2)(3);
 
-	/* Defining Aggregate and Sum Types */
+    /* Defining Aggregate and Sum Types */
 
-	type Vec3 = (x : i32, y : i32, z : i32);
-	type u8_or_f32 = u : u8 | f : f32;
+    type Vec3 (x : i32, y : i32, z : i32);
+    type u8_or_f32 (u : u8 | f : f32);
 
-	/* Defining and Using an Infix Function */
+    /* Defining and Using an Infix Function */
 
-	let a : Vec3 = (1, 2, 3);
-	let b : Vec3 = (2, 2, 2);
+    let a : Vec3 = (1, 2, 3);
+    let b : Vec3 = (2, 2, 2);
 
-	let 'cross' = fn (a : Vec3, b : Vec3) -> Vec3{
-		let ret : Vec3;
-		ret.x = a.x * b.x;
-		ret.y = a.y * b.y;
-		ret.z = a.z * b.z;
-		ret;
-	}
+    let 'cross'(a, b) : (Vec3, Vec3) -> Vec3 = (a.x * b.x, a.y * b.y, a.z * b.z);
 
-	let c = a 'cross' b;
+    let c = a 'cross' b;
 
-	/* Using an Operator as a Prefix Function */
+    /* Using an Operator as a Prefix Function */
 
-	let x = 5;
-	let y = 2;
+    let x = 5;
+    let y = 2;
 
-	let z = `+`(x)(y);
+    let z = `+`(x)(y);
+    let t = `,`(20)(30);
 
 </pre>
 </div>
