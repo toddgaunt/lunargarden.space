@@ -190,10 +190,10 @@ semantics.
 
     /* Defining and Using an Infix Function */
 
+    let 'cross'(a)(b) : (Vec3, Vec3) -> Vec3 = (a.x * b.x, a.y * b.y, a.z * b.z);
+
     let a : Vec3 = (1, 2, 3);
     let b : Vec3 = (2, 2, 2);
-
-    let 'cross'(a, b) : (Vec3, Vec3) -> Vec3 = (a.x * b.x, a.y * b.y, a.z * b.z);
 
     let c = a 'cross' b;
 
