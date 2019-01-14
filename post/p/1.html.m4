@@ -1,7 +1,7 @@
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `p/1')m4_dnl
-m4_define(`POST_TITLE', `libcpso v1.0.0')m4_dnl
-m4_define(`POST_DATE', `2019-01-13')m4_dnl
+m4_define(`POST_TITLE', `libcpso')m4_dnl
+m4_define(`POST_DATE', `2019-01-14')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
 POST_HEADER
@@ -38,6 +38,7 @@ with 'make install', and uninstalled with 'make uninstall'. Note that any build
 configuration changes made to config.mk must be the same for both the install
 and uninstall targets, otherwise they may not work as desired.</p>
 
-<p>Download link: <a href="FILES_DIR/2019-01-14/cpso-v1.0.0.tar.gz">cpso-v1.0.0.tar.gz</a>.
+<h3>Download Links</h3>
+<p>2019-01-14: <a href="FILES_DIR/2019-01-14/cpso-v1.0.0.tar.gz">cpso-v1.0.0.tar.gz</a></p>
 
 POST_FOOTER
