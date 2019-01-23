@@ -2,11 +2,7 @@ m4_define(`ROOT_DIR', `')m4_dnl
 m4_include(`site.m4')m4_dnl
 <!DOCTYPE html>
 <!--Author: Todd Gaunt-->
-<html>
-HEADER(`Wired')
-<body>
-TITLE
-<div class="column-center">
+SITE_HEADER(`Wired')
 <div class="panel">
 	<h2>WIRED</h2>
 	<div class="panel-content">
@@ -18,6 +14,4 @@ TITLE
 	 - "I joke, somewhat."</p>
 	</div>
 </div>
-</div>
-</body>
-</html>
+SITE_FOOTER

@@ -136,11 +136,11 @@ table th {
 	margin-right: auto;
 }
 
-.column-center {
+.content {
 	height: auto;
-	margin-left: 10%;
-	margin-right: 10%;
-	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 48em;
 }
 
 .centered {
@@ -160,8 +160,7 @@ pre {
 	background-color: #d5d0ba;
 	box-shadow: 0em 0em .2em #65605a;
 	overflow: auto;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	margin: 2%;
 }
 
 .panel-content {
