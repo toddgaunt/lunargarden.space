@@ -17,6 +17,5 @@ two bars being two rests, and so on.
 <p>
 The song below is designed to be printed out on 8.5x11" paper at 300 dpi.
 </p>
-
 GALLERY(FILES_DIR`/2018-12-08/sarias_song.png', `Ocarina tab sheet for Saria'RQ`Song')
 POST_FOOTER

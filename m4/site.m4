@@ -13,11 +13,11 @@ m4_define(`SITE_HEADER', `m4_dnl
 	<h4 id="email">'EMAIL_ADDRESS`</h4>
 	<div id="navbar">
 	<p style="text-align: center;">
-		|<a href="'ROOT_DIR`about.html">About</a>|
-		|<a href="'ROOT_DIR`art.html">Art</a>|
-		|<a href="'ROOT_DIR`blog.html">Blog</a>|
-		|<a href="'ROOT_DIR`programs.html">Programs</a>|
-		|<a href="'ROOT_DIR`wired.html">Wired</a>|
+		[<a href="'ROOT_DIR`about.html">About</a>]
+		[<a href="'ROOT_DIR`art.html">Art</a>]
+		[<a href="'ROOT_DIR`blog.html">Blog</a>]
+		[<a href="'ROOT_DIR`programs.html">Programs</a>]
+		[<a href="'ROOT_DIR`wired.html">Wired</a>]
 		</p>
 	</div>')m4_dnl
 m4_define(`SITE_FOOTER', `m4_dnl

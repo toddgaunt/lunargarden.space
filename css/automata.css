@@ -103,8 +103,8 @@ table th {
 	text-align: left;
 }
 
-#scanlines {
-	background-image: url("../res/wired/scanlines.gif");
+#404bg {
+	background-image: url("../res/automata/static.gif");
 	background-repeat: repeat;
 	background-size: 9px 9px;
 }
@@ -128,12 +128,6 @@ table th {
 	width: 60%;
 	margin-left: 20%;
 	margin-right: 20%;
-}
-
-.img-center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .content {
@@ -177,6 +171,9 @@ pre {
 .gallery {
 	max-width: 100%;
 	max-height: 80vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* End of file */
