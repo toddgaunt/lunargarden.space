@@ -19,6 +19,6 @@ run the executable and press enter to play.</p>
 <p>Dropping pieces: Spacebar or Return/Enter.</p>
 
 <h3>Download Links</h3>
-<p>2019-02-01: <a href="FILES_DIR/2019-02-01/hidamari-v1.0.0.tar.gz">hidamari-v1.0.0.tar.gz</a></p>
+<p>2019-02-01: <a href="FILES_DIR/2019-02-01/hidamari-v1.0.0.tar.gz">hidamari_v1.0.0.tar.gz</a></p>
 
 POST_FOOTER
