@@ -1,11 +1,11 @@
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `p/2')m4_dnl
 m4_define(`POST_TITLE', `utest')m4_dnl
-m4_define(`POST_DATE', `2019-02-10')m4_dnl
+m4_define(`POST_DATE', `2019-02-10/2019-02-13')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
 POST_HEADER
-<h3>utest</h3>
+<h3>Libutest</h3>
 <p>
 utest is a simple set of macros used to facilitate writing unit tests
 easily, with clear and simple error reports, and individual test registration.
@@ -91,7 +91,14 @@ An easy installation command is provided with the libutest makefile:
 make install
 </pre>
 
+<h3>Changelog</h3>
+<h4>v1.2.0 - 2019-02-13</h4>
+<p>Add failure message for forked tests that do not exit cleanly</p>
+<h4>v1.1.0 - 2019-02-10</h4>
+<p>Initial release</p>
+
 <h3>Download Links</h3>
+<p>2019-02-13: <a href="FILES_DIR/2019-02-10/utest_v1.1.0.tar.gz">utest_v1.2.0.tar.gz</a></p>
 <p>2019-02-10: <a href="FILES_DIR/2019-02-10/utest_v1.1.0.tar.gz">utest_v1.1.0.tar.gz</a></p>
 
 POST_FOOTER
