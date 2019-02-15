@@ -78,9 +78,7 @@ body, html {
 }
 
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	list-style-type: circle;
 }
 
 table {
