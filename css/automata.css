@@ -126,6 +126,7 @@ table th {
 	max-width: 52em;
 	margin-left: auto;
 	margin-right: auto;
+    text-align: center;
 }
 
 .content {
@@ -140,8 +141,6 @@ table th {
 }
 
 pre {
-	display: inline-block;
-	text-align: left;
 	white-space: pre-wrap;
 	word-break: keep-all;
 	font-weight: lighter;
