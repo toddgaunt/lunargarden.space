@@ -1,7 +1,7 @@
 m4_define(`ROOT_DIR', `../../')m4_dnl
 m4_define(`POST_NUMBER', `p/2')m4_dnl
 m4_define(`POST_TITLE', `utest')m4_dnl
-m4_define(`POST_DATE', `2019-02-10/2019-02-14')m4_dnl
+m4_define(`POST_DATE', `2019-02-10 -> 2019-02-14')m4_dnl
 m4_define(`POST_AUTHOR', `Todd Gaunt')m4_dnl
 m4_include(`site.m4')m4_dnl
 POST_HEADER
@@ -93,6 +93,7 @@ Libutest can be uninstalled with:
 <ul>
     <li>Add LICENSE file</li>
     <li>Update manpage</li>
+    <li>Fix error message for unclean fork exits appearing when exiting cleanly</li>
 </ul>
 <h4>v1.2.0 - 2019-02-13</h4>
 <ul>
